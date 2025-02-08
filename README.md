@@ -22,4 +22,8 @@ This project is a simple and scalable note-taking application built with AWS Amp
 - **Create Notes**: Users can create notes with a name, description, and an optional image. Images are uploaded to AWS Storage.
 - **View Notes**: Users can view all their notes with images, and details about the notes are fetched from the backend.
 - **Delete Notes**: Users can delete notes, and they will be removed both from the user interface and the backend.
+
+## Live Deployment
+
+- **View Here**: https://main.d1ztm9vf7wa50r.amplifyapp.com/
   
