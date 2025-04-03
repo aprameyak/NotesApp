@@ -2,6 +2,9 @@
 
 This project is a simple and scalable note-taking application built with AWS Amplify that allows users to securely sign in, create, view, and delete notes with images. The app leverages AWS services like Amplify Authentication, Storage, and Data to store and manage notes.
 
+![React.js Badge](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![AWS Amplify Badge](https://img.shields.io/badge/AWS%20Amplify-232F3E?style=for-the-badge&logo=aws-amplify&logoColor=white)
+
 ## Features
 
 - **User Authentication**: Secure sign-in and sign-out with AWS Amplify Authenticator for user management.
@@ -25,5 +28,4 @@ This project is a simple and scalable note-taking application built with AWS Amp
 
 ## Live Deployment
 
-- **View Here**: https://main.d1ztm9vf7wa50r.amplifyapp.com/
-  
+- **View Here**: [Notes App](https://main.d1ztm9vf7wa50r.amplifyapp.com/)
