@@ -1,31 +1,30 @@
 # **Notes App**
 
-This project is a simple and scalable note-taking application built with AWS Amplify that allows users to securely sign in, create, view, and delete notes with images. The app leverages AWS services like Amplify Authentication, Storage, and Data to store and manage notes.
+A simple note-taking app built with React and Vite. Create, view, and delete notes with an optional image. Notes and images are saved in the browser with IndexedDB, so there's no account, no backend, and nothing to pay for.
 
 ![React.js Badge](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![AWS Amplify Badge](https://img.shields.io/badge/AWS%20Amplify-232F3E?style=for-the-badge&logo=aws-amplify&logoColor=white)
+![Vite Badge](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ## Features
 
-- **User Authentication**: Secure sign-in and sign-out with AWS Amplify Authenticator for user management.
-- **CRUD Operations**: Create, read, and delete notes. Each note can have a name, description, and an optional image.
-- **Image Storage**: Stores images associated with notes using AWS Amplify Storage for scalable cloud storage.
-- **Responsive Design**: Built with React.js and AWS Amplify UI components for a seamless user experience across devices.
+- **CRUD Operations**: Create, read, and delete notes. Each note has a name, description, and an optional image.
+- **Image Storage**: Images are stored alongside the note in the browser.
+- **Persistence**: Notes stay after a refresh or restart. They live in the browser they were created in and don't sync between devices.
+- **Responsive Design**: Works on desktop and mobile, in light and dark mode.
 
 ## Technology Stack
 
-- **Frontend**: React.js, AWS Amplify UI React
-- **Backend**: AWS Amplify (GraphQL API, Storage, Authentication)
-- **Storage**: AWS Amplify Storage for image management
-- **Authentication**: AWS Amplify Auth for user sign-in and sign-out
+- **Frontend**: React.js, Vite
+- **Storage**: IndexedDB (`src/notes.js`)
+- **Hosting**: Cloudflare (static assets)
 
-## Functionality
+## Run it
 
-- **Sign In/Sign Out**: Users can sign in using AWS Amplify’s built-in authentication and sign out from the app.
-- **Create Notes**: Users can create notes with a name, description, and an optional image. Images are uploaded to AWS Storage.
-- **View Notes**: Users can view all their notes with images, and details about the notes are fetched from the backend.
-- **Delete Notes**: Users can delete notes, and they will be removed both from the user interface and the backend.
+```
+npm install
+npm run dev
+```
 
 ## Live Deployment
 
-- **View Here**: [Notes App](https://main.d1ztm9vf7wa50r.amplifyapp.com/)
+- **View Here**: [Notes App](https://notesapp.aprameyak.workers.dev/)

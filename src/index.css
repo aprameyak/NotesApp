@@ -2,34 +2,139 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  color-scheme: light dark;
 
-  color: rgba(255, 255, 255, 0.87);
+  --bg: #ffffff;
+  --text: #1d2228;
+  --muted: #5c6670;
+  --border: #d0d5db;
+  --primary: #047d95;
+  --danger: #c4262e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
 
-  max-width: 1280px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #15191e;
+    --text: #e8ebee;
+    --muted: #9aa4ae;
+    --border: #3a424b;
+    --primary: #2aa5bf;
+    --danger: #e5484d;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  width: min(70%, 1100px);
   margin: 0 auto;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.hint {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   padding: 2rem;
-
+  margin: 2rem 0;
 }
 
-.card {
-  padding: 2em;
+.note-form input:not([type="file"]) {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0;
 }
 
-.read-the-docs {
-  color: #888;
+.note-form input[type="file"] {
+  align-self: flex-end;
 }
 
-.box:nth-child(3n + 1) {
-  grid-column: 1;
+button {
+  font: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: inherit;
 }
-.box:nth-child(3n + 2) {
-  grid-column: 2;
+
+button.primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
 }
-.box:nth-child(3n + 3) {
-  grid-column: 3;
+
+button.destructive {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.box h3 {
+  margin: 0;
+}
+
+.description {
+  font-style: italic;
+  margin: 0;
+}
+
+.box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 6px;
+}
+
+@media (max-width: 640px) {
+  .app {
+    width: auto;
+    padding: 1rem 16px;
+  }
 }
